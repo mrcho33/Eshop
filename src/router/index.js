@@ -7,6 +7,7 @@ import Welcome from '@/components/welcome.vue'
 import Users from '@/components/users.vue'
 import Rights from '@/components/power/rights.vue'
 import Roles from '@/components/power/roles.vue'
+import Cate from '@/components/goods/cate.vue'
 
 // token修改
 Vue.use(Router)
@@ -32,7 +33,8 @@ const router = new Router({
         { name: 'welcome', path: '/welcome', component: Welcome },
         { name: 'users', path: '/users', component: Users },
         { name: 'rights', path: '/rights', component: Rights },
-        { name: 'roles', path: '/roles', component: Roles }
+        { name: 'roles', path: '/roles', component: Roles },
+        { name: 'cate', path: '/cate', component: Cate }
       ]
     }
   ]

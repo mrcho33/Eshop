@@ -204,7 +204,7 @@ export default {
           },
           { validator: checkMobile, trigger: 'blur' }
         ]
-      },     
+      },
       // 控制分配角色对话框的显示与隐藏
       setRoleDialogVisible: false,
       // 需要被分配角色的用户信息
@@ -336,13 +336,13 @@ export default {
     },
     // 点击按钮保存分配角色
     async saveRoleInfo () {
-      if(!this.selectedRoleId) {
+      if (!this.selectedRoleId) {
         return this.$message.error('请选择要分配的权限')
       }
-      const { data: res } = await this.$http.put(`users/${this.userInfo.id}/role`, 
-      {
-        rid: this.selectedRoleId
-      })
+      const { data: res } = await this.$http.put(`users/${this.userInfo.id}/role`,
+        {
+          rid: this.selectedRoleId
+        })
       if (res.meta.status !== 200) {
         return this.$message.error('更新角色失败！')
       }

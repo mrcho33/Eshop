@@ -33,7 +33,7 @@
                             <i class="el-icon-caret-right"></i>
                           </el-col>
                           <el-col :span="18">
-                            <el-tag v-for="(item3, i3) in item2.children" :key="item3.id" type="warning" closable @close="removeRightById(scope.row, item3.id)">{{item3.authName}}</el-tag>
+                            <el-tag v-for="(item3) in item2.children" :key="item3.id" type="warning" closable @close="removeRightById(scope.row, item3.id)">{{item3.authName}}</el-tag> <!-- 先隐藏i3 v-for="(item3, i3) in item2.children"-->
                           </el-col>
                       </el-row>
                   </el-col>
